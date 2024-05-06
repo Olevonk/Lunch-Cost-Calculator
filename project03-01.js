@@ -8,26 +8,26 @@
 
       Filename: project03-01.js
 */
-var menuItems = document.getElementsByClassName('menuItem');
+let menuItems = document.getElementsByClassName("menuItem");
 
 // Looping through all elements of the menuItems collection
-for (var i = 0; i < menuItems.length; i++) {
-      menuItems[i].addEventListener('click', calcTotal);
+for (let i = 0; i < menuItems.length; i++) {
+      menuItems[i].addEventListener("click", calcTotal);
   }
 
 // Function to calculate the total cost of the customer order
 function calcTotal() {
-      var orderTotal = 0;
+    let orderTotal = 0;
   
       // Looping through all elements of the menuItems collection
-      for (var i = 0; i < menuItems.length; i++) {
+      for (let i = 0; i < menuItems.length; i++) {
           if (menuItems[i].checked) {
               orderTotal += Number(menuItems[i].value);
           }
       }
   
       // Changing the innerHTML property of the element with id "billTotal" to the total order cost
-      document.getElementById('billTotal').innerHTML = formatCurrency(orderTotal);
+      document.getElementById("billTotal").innerHTML = formatCurrency(orderTotal);
   }
 
  // Function to display a numeric value as a text string in the format $##.## 
